@@ -40,54 +40,32 @@ scroll(animate(".progress", { strokeDasharray: ["0,1", "1,1"] }));
 //   // };
 // });
 
-// animate("body", { opacity: [0, 1] }, { duration: 4 });
+animate("body", { opacity: [0, 1] }, { duration: 4 });
 
-// inView(".box1", () => {
-//   animate(".box1", { x: [-2000, 0] }, { duration: 2 });
-// });
+inView(".box1", () => {
+  animate(".box1", { x: [-2000, 0] }, { duration: 2 });
+});
 
-// inView(".box2", () => {
-//   animate(".box2", { x: [2000, 0] }, { duration: 2 });
-// });
+inView(".box2", () => {
+  animate(".box2", { x: [2000, 0] }, { duration: 2 });
+});
 
-// inView(".box3", () => {
-//   animate(".box3", { x: [-2000, 0] }, { duration: 3 });
-// });
+inView(".box3", () => {
+  animate(".box3", { x: [-2000, 0] }, { duration: 3 });
+});
 
-// inView(".box4", () => {
-//   animate(".box4", { x: [-3000, 0] }, { duration: 3 });
-// });
+inView(".box4", () => {
+  animate(".box4", { x: [-3000, 0] }, { duration: 3 });
+});
 
-// inView(".box5", () => {
-//   animate(".box5", { x: [-4000, 0] }, { duration: 3 });
-// });
+inView(".box5", () => {
+  animate(".box5", { x: [-4000, 0] }, { duration: 3 });
+});
 
-// inView(".box6", () => {
-//   animate(".box6", { x: [-4000, 0] }, { duration: 4 });
-// });
+inView(".box6", () => {
+  animate(".box6", { x: [-4000, 0] }, { duration: 4 });
+});
 
-// inView(".box7", () => {
-//   animate(".box7", { y: [2000, 0] }, { duration: 2 });
-// });
-
-// // const navSlide = () => {
-// //   const burger = document.querySelector(".burger");
-// //   const nav = document.querySelector(".nav-links");
-// //   const navLinks = document.querySelectorAll(".nav-links a");
-
-// //   burger.addEventListener("click", () => {
-// //     nav.classList.toggle("nav-active");
-
-// //     navLinks.forEach((link, index) => {
-// //       if (link.style.animation) {
-// //         link.style.animation = "";
-// //       } else {
-// //         link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s `;
-// //       }
-// //     });
-// //     burger.classList.toggle("toggle");
-// //   });
-// //   //
-// // };
-
-// // navSlide();
+inView(".box7", () => {
+  animate(".box7", { y: [2000, 0] }, { duration: 2 });
+});
