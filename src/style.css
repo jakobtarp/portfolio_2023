@@ -17,7 +17,14 @@
   .procesbar svg {
     position: fixed;
     top: 20px;
-    left: 20px;
+    left: 2px;
+    transform: rotate(-90deg);
+  }
+
+  .procesbar1 svg {
+    position: fixed;
+    top: 20px;
+    left: 10px;
     transform: rotate(-90deg);
   }
 
