@@ -10,8 +10,8 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
     <title>Portfolio 2023</title>
     <link rel="icon" type="image/x-icon" href="/public/img/mig.webp" />
-    <script type="module" crossorigin src="./assets/main-03485b5a.js"></script>
-    <link rel="stylesheet" href="./assets/index-48aa5672.css">
+    <script type="module" crossorigin src="./assets/main-8fe0dc8c.js"></script>
+    <link rel="stylesheet" href="./assets/index-e510891e.css">
   </head>
 
   <!-- Procesbar  -->
@@ -19,23 +19,29 @@
 
     
   
-  <div class="procesbar ">
-  <svg width="60" height="60" viewBox="0 0 100 100">
+  <div class="procesbar lg:hidden ">
+  <svg width="35" height="35" viewBox="0 0 100 100">
     <circle cx="50" cy="50" r="30" pathLength="1" class="bg" />
     <circle cx="50" cy="50" r="30" pathLength="1" class="progress" />
   </svg>
   </div>
 
+    <div class="procesbar1 hidden lg:block ">
+  <svg width="60" height="60" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="30" pathLength="1" class="bg" />
+    <circle cx="50" cy="50" r="30" pathLength="1" class="progress" />
+  </svg>
+  </div>
   <nav class="top-0 z-10 flex w-full flex-wrap fixed items-center justify-between p-6 " x-data="{ isOpen: false }" @keydown.escape="isOpen = false" :class="{ 'shadow-lg bg-transparent backdrop-blur-xl' : isOpen , 'bg-transparent' : !isOpen}">
     <!--Logo etc-->
-    <div class="mr-6 flex flex-shrink-0 items-center text-sky-500">
+    <div class="mr-6 flex flex-shrink-0 items-center text-black">
 
       </a>
     </div>
 
     <!--Toggle button (hidden on large screens)-->
     <button @click="isOpen = !isOpen" type="button" class="block px-8 text-white hover:text-white focus:text-gray-500 focus:outline-none lg:hidden" :class="{ 'transition transform-180': isOpen }">
-      <svg class="h-9 w-9 fixed fill-current text-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <svg class="h-9 w-9 fixed fill-current text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
         <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
       </svg>
@@ -45,62 +51,72 @@
     <div class="hidden mt-8  w-full flex-grow " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" x-show.transition="true">
       <ul class="list-reset flex-1 items-center font-medium pt-6 space-x-4 lg:pt-0">
         <li class="">
-          <a class="flex place-content-center text-start 200ms py-2 px-4 text-sky-400 filter transition hover:scale-110  hover:underline mx-auto" href="#skills" @click="isOpen = false">Skills_</a>
+          <a class="flex place-content-center text-start 200ms py-2 px-4 text-black filter transition hover:scale-110  hover:underline mx-auto" href="#skills" @click="isOpen = false">Skills</a>
         </li>
         <li class="">
-          <a class="flex place-content-center 200ms  py-2 px-4 text-sky-400 filter transition hover:scale-110 hover:font-semibold hover:underline mx-auto" href="#projects" @click="isOpen = false">Projects_</a>
+          <a class="flex place-content-center 200ms  py-2 px-4 text-black filter transition hover:scale-110 hover:font-semibold hover:underline mx-auto" href="#projects" @click="isOpen = false">Projects</a>
         </li>
         <li class="">
-          <a class=" flex place-content-center 200ms  py-2 px-4 text-sky-400 filter transition hover:scale-110 hover:font-semibold hover:underline mx-auto" href="#passion" @click="isOpen = false">Passion_</a>
+          <a class=" flex place-content-center 200ms  py-2 px-4 text-black filter transition hover:scale-110 hover:font-semibold hover:underline mx-auto" href="#passion" @click="isOpen = false">Passion</a>
         </li>
         <li class="">
-          <a class="flex place-content-center 200ms  py-2 px-4 text-sky-400 filter transition hover:scale-110 hover:font-semibold hover:underline mx-auto" href="#cv" @click="isOpen = false">CV_</a>
+          <a class="flex place-content-center 200ms  py-2 px-4 text-black filter transition hover:scale-110 hover:font-semibold hover:underline mx-auto" href="#cv" @click="isOpen = false">CV</a>
         </li>
         <li class="">
-          <a class="flex place-content-center 200ms  py-2 px-4 text-sky-400 filter transition hover:scale-110 hover:font-semibold hover:underline" href="#resume" @click="isOpen = false">Resume_</a>
+          <a class="flex place-content-center 200ms  py-2 px-4 text-black filter transition hover:scale-110 hover:font-semibold hover:underline" href="#resume" @click="isOpen = false">Resume</a>
         </li>
         <li class="">
-          <a class="flex place-content-center 200ms  py-2 px-4 text-sky-400 filter transition hover:scale-110 hover:font-semibold hover:underline" href="#contact" @click="isOpen = false">Contact_</a>
+          <a class="flex place-content-center 200ms  py-2 px-4 text-black filter transition hover:scale-110 hover:font-semibold hover:underline" href="#contact" @click="isOpen = false">Contact</a>
         </li>
        
       </ul>
     </div>
   </nav>
   <!-- text-focus-in -->
-  
-  <body class="lg:bg-hero bg-cover bg-mobil">
-      <div class="mx-auto place-items-center p-6 text-white lg:max-w-screen-lg lg:p-8 ">
-    <div class="mx-auto grid h-screen grid-cols-2 place-content-center lg:place-items-center">
-      <div class="mx-auto mt-auto grid">
-        <h1 class="inline-block text-black text-3xl font-bold  md:text-7xl lg:mb-2 lg:text-7xl">Jakob Tarp</h1>
-        <h2 class="inline-block text-black text-xl font-bold  md:text-4xl lg:text-4xl">Multimediedesigner</h2>
+  <!-- lg:bg-hero bg-cover bg-mobil -->
 
-        <h3 class="mb-10 inline-block bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] text-black bg-clip-text text-lg font-bold  md:text-3xl lg:text-3xl">Portfolio 2023</h3>
+  <!-- bg-gradient-to-r from-brown via-brown1 to-brown2 -->
+  <body class="bg-amber-400">
+      <div id="toppen" class="mx-auto place-items-center p-6  lg:max-w-screen-lg lg:p-8 px-12 ">
+    <div class="grid h-screen grid-cols-2 place-content-center ">
+      <div class="mx-auto mt-auto grid border-b-4 rounded-md border-black ">
+        <h1 class="inline-block text-black text-4xl font-bold  md:text-7xl lg:mb-2 lg:text-8xl">Jakob Tarp</h1>
+        <h2 class="inline-block text-black text-xl font-bold  md:text-4xl lg:text-3xl text-end">Multimediedesigner</h2>
+
+        <h3 class="mb-auto inline-block bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] text-black bg-clip-text text-lg font-bold text-end  md:text-3xl lg:text-5xl">Portfolio 2023</h3>
       </div>
       <div class="-z-10"><img src="img/mig.webp" alt="Jakob Tarp" /></div>
       <div class="hidden lg:block mx-auto ">
-      <div class="flex gap-1 lg:gap-4 ">
-        <a class="my-auto inline-flex    px-2 py-1 text-xs font-light md:rounded-full  md:py-2 md:px-10 md:text-xl md:hover:scale-110  lg:rounded-full lg:border-b-2 lg:border-black text-black lg:py-2 lg:px-10 lg:text-xl lg:hover:scale-110 " href="#skills">Skills <img class="ml-3 hidden lg:block lg:w-5" src="img/downarrow.webp" alt="#skills" /></a>
-        <a class="my-auto inline-flex    px-2 py-1 text-xs font-light md:rounded-full  md:py-2 md:px-10 md:text-xl md:hover:scale-110  lg:rounded-full lg:border-b-2 lg:border-black text-black lg:py-2 lg:px-10 lg:text-xl lg:hover:scale-110 " href="#projects">Projects <img class="ml-3 hidden lg:block lg:w-5" src="img/downarrow.webp" alt="#skills" /></a>
-        <a class="my-auto inline-flex    px-2 py-1 text-xs font-light md:rounded-full  md:py-2 md:px-10 md:text-xl md:hover:scale-110  lg:rounded-full lg:border-b-2 lg:border-black text-black lg:py-2 lg:px-10 lg:text-xl lg:hover:scale-110 " href="#passion">Passion<img class="ml-3 hidden lg:block lg:w-5" src="img/downarrow.webp" alt="#skills" /></a>
-        <a class="my-auto inline-flex    px-2 py-1 text-xs font-light md:rounded-full  md:py-2 md:px-10 md:text-xl md:hover:scale-110  lg:rounded-full lg:border-b-2 lg:border-black text-black lg:py-2 lg:px-10 lg:text-xl lg:hover:scale-110 " href="#cv">CV<img class="ml-3 hidden lg:block lg:w-5" src="img/downarrow.webp" alt="#skills" /></a>
-        <a class="my-auto inline-flex    px-2 py-1 text-xs font-light md:rounded-full  md:py-2 md:px-10 md:text-xl md:hover:scale-110  lg:rounded-full lg:border-b-2 lg:border-black text-black lg:py-2 lg:px-10 lg:text-xl lg:hover:scale-110 " href="#resume">Resume<img class="ml-3 hidden lg:block lg:w-5" src="img/downarrow.webp" alt="#skills" /></a>
-        <a class="my-auto inline-flex    px-2 py-1 text-xs font-light md:rounded-full  md:py-2 md:px-10 md:text-xl md:hover:scale-110  lg:rounded-full lg:border-b-2 lg:border-black text-black lg:py-2 lg:px-10 lg:text-xl lg:hover:scale-110 " href="#contact">Contact <img class="ml-3 hidden lg:block lg:w-5" src="img/downarrow.webp" alt="#skills" /></a>
+      <div class="grid fixed right-10 top-16 gap-1 lg:gap-4 mx-auto">
+        <p class="text-end text-4xl underline ">Menu</p>
+        <a class="my-auto inline-flex hover:line-through filter transition 300ms   px-2 py-1 text-xs font-light   md:py-2 md:px-10 md:text-xl md:hover:scale-110   text-black lg:py-2 lg:px-10 lg:text-xl lg:hover:scale-125 " href="#skills">Skills </a>
+        <a class="my-auto inline-flex hover:line-through filter transition 300ms    px-2 py-1 text-xs font-light   md:py-2 md:px-10 md:text-xl md:hover:scale-110   text-black lg:py-2 lg:px-10 lg:text-xl lg:hover:scale-125 " href="#projects">Projects </a>
+        <a class="my-auto inline-flex hover:line-through filter transition 300ms   px-2 py-1 text-xs font-light   md:py-2 md:px-10 md:text-xl md:hover:scale-110   text-black lg:py-2 lg:px-10 lg:text-2xl lg:hover:scale-125 " href="#passion">Passion</a>
+        <a class="my-auto inline-flex hover:line-through filter transition 300ms   px-2 py-1 text-xs font-light   md:py-2 md:px-10 md:text-xl md:hover:scale-110   text-black lg:py-2 lg:px-10 lg:text-2xl lg:hover:scale-125 " href="#cv">CV</a>
+        <a class="my-auto inline-flex hover:line-through filter transition 300ms   px-2 py-1 text-xs font-light   md:py-2 md:px-10 md:text-xl md:hover:scale-110   text-black lg:py-2 lg:px-10 lg:text-2xl lg:hover:scale-125 " href="#resume">Resume</a>
+        <a class="my-auto inline-flex hover:line-through filter transition 300ms   px-2 py-1 text-xs font-light   md:py-2 md:px-10 md:text-xl md:hover:scale-110   text-black lg:py-2 lg:px-10 lg:text-2xl lg:hover:scale-125 " href="#contact">Contact </a>
       </div>
       </div>
     </div>
 
+    <div class="fixed left-4 top-14 lg:left-8 lg:top-20 lg:text-2xl"><p>P</p>
+    <p>O</p><p>R</p><p>T</p><p>F</p><p>O</p><p>L</p><p>I</p><p>O</p>
+</div>
+
+
+<a class="" href="#toppen"><div class="hover:scale-110 fixed bottom-10 left-0 lg:left-1"><img class="w-14 lg:w-20" src="img/top.png" alt=""></div>
+<p class="fixed bottom-5 left-2 lg:left-5  lg:text-xl text-sm ">Toppen</p></a>
 <!-- <div class=' '>
 
 <div class="h-[2000px] absolute top-10  right-10 rounded-3xl  bg-green-300 w-[10px]"><h3 class="rotate-90 absolute right-10 top-96">Portfolio</h3></div>
 
 </div> -->
 
-<body>
+
   
-    <section id="skills" class="mb-20 grid h-screen grid-cols-3 place-items-center">
+    <section id="skills" class="mb-20 grid h-screen grid-cols-3 place-items-center text-black">
       <div class="grid place-content-center gap-3 lg:gap-6">
-        <h2 class="inline-block text-black text-3xl font-bold  lg:text-5xl">Core skills</h2>
+        <h2 class="inline-block text-black text-3xl font-bold  lg:text-5xl underline">Core skills</h2>
         <div class="flex gap-1 lg:gap-3">
           <img class="h-7 lg:h-10" src="img/html.webp" alt="" />
           <p class="font-semibold lg:text-2xl">Html</p>
@@ -126,7 +142,7 @@
       <div class="lg:box7"><hr class="mx-auto my-4 h-1 w-20 justify-center rounded border-0 bg-black md:my-10 lg:w-48" /></div>
 
       <div class="lg:box2 grid place-content-center gap-3 lg:gap-6">
-        <h2 class="inline-block text-black text-end text-3xl font-bold  lg:text-5xl">Other skills</h2>
+        <h2 class="inline-block text-black text-end text-3xl font-bold  lg:text-5xl underline">Other skills</h2>
 
         <div class="ml-auto flex gap-1 lg:gap-3">
           <p class="font-semibold lg:text-2xl">Figma</p>
@@ -157,38 +173,38 @@
       <div class="md:hidden lg:hidden">
         <h2 class="mb-5 text-black text-3xl font-bold  lg:text-5xl">Projects</h2>
 
-        <p class="mb-20 text-black">Her er nogle af de projekter som jeg har været en del af, min typiske rolle har været kodning og det tekniske.</p>
+        <p class="mb-20 text-black font-sans text-sm">Her er nogle af de projekter som jeg har været en del af, min typiske rolle har været kodning og det tekniske.</p>
       </div>
 
       <div class="grid place-items-center gap-8 md:grid-cols-3 lg:grid-cols-3">
         <div class="hidden md:block lg:block">
-          <h2 class="mb-10 text-black text-3xl font-bold  lg:text-5xl">Projects</h2>
+          <h2 class="mb-10 text-black text-3xl font-bold  lg:text-5xl underline">Projects</h2>
 
-          <p class="text-black">Her er nogle af projekter som jeg har været en del af, min typiske rolle i gruppearbejdet har været kodning og det tekniske.</p>
+          <p class="text-black font-sans">Her er nogle af projekter som jeg har været en del af, min typiske rolle i gruppearbejdet har været kodning og det tekniske.</p>
         </div>
         <div class="col-span-2 grid grid-cols-2 gap-8">
-          <div class="relative h-full w-full overflow-hidden rounded-2xl border-4 border-sky-400 object-cover">
+          <div class="relative h-full w-full overflow-hidden rounded-2xl border-4 border-amber-400 object-cover shadow-2xl">
             <a href="https://dnygaard.dk/kea/09_CMS/nbu/wordpress/"><img class="cursor-pointer rounded-2xl brightness-50 grayscale filter transition duration-200 hover:scale-110 hover:rounded-lg hover:filter-none" src="img/nbt.webp" alt="" /></a>
-            <div class="absolute inset-x-0 bottom-0 w-full bg-blue-400 py-1 text-center text-xs leading-4 text-white">Nørrebro United / Fodboldklub</div>
+            <div class="absolute inset-x-0 bottom-0 w-full bg-amber-400 py-1 text-center text-xs leading-4 text-black"> <p> Nørrebro United / Fodboldklub</p></div>
           </div>
 
-          <div class="relative h-full w-full overflow-hidden rounded-2xl border-4 border-sky-400">
+          <div class="relative h-full w-full overflow-hidden rounded-2xl border-4  border-amber-400 shadow-2xl">
             <a href="https://dnygaard.dk/kea/tonelise/wordpress/"><img class="cursor-pointer rounded-2xl brightness-50 grayscale filter transition duration-200 hover:scale-110 hover:rounded-lg hover:filter-none" src="img/tonelise.webp" alt="" /></a>
-            <div class="absolute inset-x-0 bottom-0 w-full bg-blue-400 py-1 text-center text-xs leading-4 text-white">Tone-Lise / Designer</div>
+            <div class="absolute inset-x-0 bottom-0 w-full bg-amber-400 py-1 text-center text-xs leading-4 text-black">Tone-Lise / Designer</div>
           </div>
 
-          <div class="relative h-full w-full overflow-hidden rounded-2xl border-4 border-sky-400">
+          <div class="relative h-full w-full overflow-hidden rounded-2xl border-4  border-amber-400 shadow-2xl">
             <a href="https://jakobtarp.github.io/kampagnesite_blaagaard/"><img class="cursor-pointer rounded-2xl brightness-50 grayscale filter transition duration-200 hover:scale-110 hover:rounded-lg hover:filter-none" src="img/blaagaard.webp" alt="" /></a>
-            <div class="absolute inset-x-0 bottom-0 w-full bg-blue-400 py-1 text-center text-xs leading-4 text-white">Blaagaard / Teater</div>
+            <div class="absolute inset-x-0 bottom-0 w-full bg-amber-400 py-1 text-center text-xs leading-4 text-black">Blaagaard / Teater</div>
           </div>
-          <div class="relative h-full w-full overflow-hidden rounded-2xl border-4 border-sky-400">
+          <div class="relative h-full w-full overflow-hidden rounded-2xl border-4  border-amber-400 shadow-2xl">
             <a href="https://jakobtarp.github.io/festival_jakob/index.html"><img class="cursor-pointer rounded-2xl brightness-50 grayscale filter transition duration-200 hover:scale-110 hover:rounded-lg hover:filter-none" src="img/festival.webp" alt="" /></a>
-            <div class="absolute inset-x-0 bottom-0 w-full bg-blue-400 py-1 text-center text-xs leading-4 text-white">FESTival / Passion</div>
+            <div class="absolute inset-x-0 bottom-0 w-full bg-amber-400 py-1 text-center text-xs leading-4 text-black">FESTival / Passion</div>
           </div>
 
-          <div class="relative h-full w-full overflow-hidden rounded-2xl border-4 border-sky-400">
+          <div class="relative h-full w-full overflow-hidden rounded-2xl border-4  border-amber-400 shadow-2xl">
             <a href="https://jakobtarp.github.io/webdoc/"><img class="mx-auto cursor-pointer rounded-2xl brightness-50 grayscale filter transition duration-200 hover:scale-110 hover:rounded-lg hover:filter-none" src="img/webdoc.webp" alt="" /></a>
-            <div class="absolute inset-x-0 bottom-0 w-full bg-blue-400 py-1 text-center text-xs leading-4 text-white">Webdoc / Webfeature</div>
+            <div class="absolute inset-x-0 bottom-0 w-full bg-amber-400 py-1 text-center text-xs leading-4 text-black">Webdoc / Webfeature</div>
           </div>
         </div>
       </div>
@@ -199,32 +215,32 @@
         <div class="md:hidden lg:hidden">
           <h2 class="mb-5 text-black text-3xl font-bold  lg:mb-10 lg:text-5xl">Passion</h2>
 
-          <p class="mb-20 text-black">Jeg er utrolig nørdet omkring mine interesser, og det her er bare nogle af dem der ligger højt på listen.</p>
+          <p class="mb-20 text-black font-sans text-sm">Jeg er utrolig nørdet omkring mine interesser, og det her er bare nogle af dem der ligger højt på listen.</p>
         </div>
 
         <div class="col-span-2 grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-3">
-          <h3 class="my-auto text-center text-2xl lg:text-3xl">Film</h3>
+          <h3 class="my-auto text-black text-center text-2xl lg:text-3xl">Film</h3>
           <hr class="my-4 hidden h-1 w-20 justify-center rounded border-0 bg-black md:my-10 md:block lg:block lg:w-40" />
-          <img class="lg:h-20 h-14" src="img/video.webp" alt="" />
-          <h3 class="my-auto text-center text-2xl lg:text-3xl">Gaming</h3>
+          <img class="lg:h-20 h-14" src="img/video2.png" alt="" />
+          <h3 class="my-auto text-black text-center text-2xl lg:text-3xl">Gaming</h3>
           <hr class="my-4 hidden h-1 w-20 justify-center rounded border-0 bg-black md:my-10 md:block lg:block lg:w-40" />
-          <img class="lg:h-20 h-14 " src="img/game-controller.webp" alt="" />
-          <h3 class="my-auto text-center text-2xl lg:text-3xl">Teknologi</h3>
+          <img class="lg:h-20 h-14 " src="img/joystick.png" alt="" />
+          <h3 class="my-auto text-black text-center text-2xl lg:text-3xl">Teknologi</h3>
           <hr class="my-4 hidden h-1 w-20 justify-center rounded border-0 bg-black md:my-10 md:block lg:block lg:w-40" />
-          <img class="lg:h-20 h-14" src="img/robot.webp" alt="" />
-          <h3 class="my-auto text-center text-2xl lg:text-3xl">Kodning</h3>
+          <img class="lg:h-20 h-14" src="img/robot1.png" alt="" />
+          <h3 class="my-auto text-black text-center text-2xl lg:text-3xl">Kodning</h3>
           <hr class="my-4 hidden h-1 w-20 justify-center rounded border-0 bg-black md:my-10 md:block lg:block lg:w-40" />
-          <img class="lg:h-20 h-14" src="img/programming.webp" alt="" />
-          <h3 class="my-auto text-center text-2xl lg:text-3xl">Skuespil</h3>
+          <img class="lg:h-20 h-14" src="img/web1.png" alt="" />
+          <h3 class="my-auto text-black text-center text-2xl lg:text-3xl">Skuespil</h3>
           <hr class="my-4 hidden h-1 w-20 justify-center rounded border-0 bg-black md:my-10 md:block lg:block lg:w-40" />
-          <img class="lg:h-20 h-14" src="img/masks.webp" alt="" />
+          <img class="lg:h-20 h-14" src="img/mask1.png" alt="" />
 
           <div class="grid"></div>
         </div>
         <div class="hidden md:block lg:block">
-          <h2 class="mb-10 text-black text-3xl font-bold  lg:text-5xl">Passion</h2>
+          <h2 class="mb-10 text-black text-3xl font-bold  lg:text-5xl underline">Passion</h2>
 
-          <p class="text-black">Jeg er utrolig nørdet omkring mine interesser, og det her er bare nogle af dem der ligger højt på listen.</p>
+          <p class="text-black font-sans ">Jeg er utrolig nørdet omkring mine interesser, og det her er bare nogle af dem der ligger højt på listen.</p>
         </div>
       </div>
     </div>
@@ -232,22 +248,22 @@
     <!-- CV -->
 
     <div id="cv" class="mt-20 grid h-screen place-content-center">
-      <div class="mb-10 text-center"><h2 class="inline-flex text-black px-5 text-4xl font-bold  lg:text-6xl">CV</h2></div>
+      <div class="mb-10 text-center"><h2 class="inline-flex text-black px-5 text-4xl font-bold  lg:text-6xl underline">CV</h2></div>
 
       <img class="hidden w-auto lg:block" src="img/cv2.webp" alt="" />
       <img class="block w-60 lg:hidden" src="img/cvmobil.webp" alt="" />
     </div>
 
     <!-- Resume -->
-    <h2 id="resume" class="my-auto mb-20 mt-60 text-black text-center text-3xl font-bold  lg:text-5xl">Resume</h2>
+    <h2 id="resume" class="my-auto mb-20 mt-60 text-black text-center text-3xl font-bold  lg:text-5xl underline">Resume</h2>
 
-    <grid class="mb-20 grid gap-10 leading-7 text-gray-400 md:grid-cols-2 lg:grid-cols-2">
+    <grid class="mb-20 grid gap-10 leading-7md:grid-cols-2 lg:grid-cols-2 font-sans text-sm">
       <div>
         <p class="text-black">Jeg er en positiv, fleksibel, energisk og ansvarsfuld mand på 25 år, som elsker nye udfordringer og at opnå resultater. Jeg er igang med 3. semester af Multidmediedesigner udannelsen på KEA og i den forbindelse ønsker jeg at søge praktik hos jer og bruge de kompetencer jeg har erhvervet mig og få fyldt rygsækken endnu mere op.</p>
         <br />
         <p class="text-black">
           Jeg har erfaring indenfor de mest brugte Adobe programmer, kodning i HTML, CSS , Tailwind og Javascript samt Wordpress. Derudover, så har jeg også erfaring indenfor videoredigering. <br />
-          Gennem mine jobs har jeg fået en nuanceret forståelse og erfaring med salg og kundeservice. Jeg er vant til at have mange bolde i luften og arbejder struktureret med høj kvalitet og præcison for øje.
+          <br> Gennem mine jobs har jeg fået en nuanceret forståelse og erfaring med salg og kundeservice. Jeg er vant til at have mange bolde i luften og arbejder struktureret med høj kvalitet og præcison for øje.
         </p>
         <br />
         <p class="text-black">Mine ferier bruger jeg gerne på Camp True North som teamleder. Det er en camp som hjælper børn og unge der har brug for et skub i den rigtige retning. Arbejdet går ud på, at jeg får 10-15 unge mennesker på mit hold og så er det mit ansvar at hjælpe og vejlede dem i løbet af ugen. Det gør jeg blandt andet, fordi personlig udvikling og udfordringer er noget jeg vægter højt. Camp True North åbnede mine øjne for fundamentale værdier. Både personligt, men også særligt i forhold til arbejdsetik, moral og det at arbejde som en del af et team. Erfaringerne som teamleder har givet mig ledelsesmæssig erfaring der har rustet mig til at tage ansvar, handle selvstændigt og være imødekommende.</p>
@@ -265,21 +281,21 @@
           <section id="contact" class="grid h-screen place-items-center md:grid-cols-2 lg:grid-cols-2">
         <div class="hidden md:block lg:block">
           <div class="flex">
-            <div class=" md:mr-10 lg:mr-10"><h2 class="inline-flex text-black px-5 text-center text-4xl font-bold  lg:text-6xl">Contact</h2></div>
+            <div class=" md:mr-10 lg:mr-10"><h2 class="inline-flex text-black px-5 text-center text-4xl font-bold  lg:text-6xl underline">Contact</h2></div>
             <div class="lg:box7 hidden md:block lg:block"><hr class="mx-auto my-4 h-1 w-20 justify-center rounded border-0 bg-black md:my-10 lg:w-48" /></div>
           </div>
         </div>
         <div class="md:hidden lg:hidden mt-auto">
-          <h2 class="mb-10 inline-flex text-black px-5 text-center text-4xl font-bold  lg:text-6xl">Contact</h2>
-          <img class="mx-auto h-10 animate-bounce md:hidden lg:hidden" src="img/downarrow..webp" alt="" />
+          <h2 class="mb-10 inline-flex text-black px-5 text-center text-4xl font-bold  lg:text-6xl underline">Contact</h2>
+          <!-- <img class="mx-auto h-10 animate-bounce md:hidden lg:hidden" src="img/downarrow..webp" alt="" /> -->
         </div>
 
         <div class="grid gap-10 lg:gap-20">
           <div>
             <div class="mx-auto grid grid-cols-2">
-              <a href="tel:+4540911335"><img class="mx-auto w-10" src="img/phone-call..webp" alt="phone" /></a>
+              <a href="tel:+4540911335"><img class="mx-auto w-10 hover:scale-110 filter transition 300ms" src="img/call.png" alt="phone" /></a>
               <div class="grid">
-                <h3 class="text-xl lg:text-2xl">Telefon</h3>
+                <h3 class="text-xl lg:text-2xl text-black">Telefon</h3>
                 <a href="tel:+4540911335"><p class="text-gray-500">+45 40 91 13 35</p></a>
               </div>
             </div>
@@ -287,9 +303,9 @@
 
           <div>
             <div class="mx-auto grid grid-cols-2">
-              <a href="mailto:jakob.tarp@outlook.com"> <img class="mx-auto w-10" src="img/email..webp" alt="mail" /></a>
+              <a href="mailto:jakob.tarp@outlook.com"> <img class="mx-auto w-10 hover:scale-110 filter transition 300ms" src="img/emai2.png" alt="mail" /></a>
               <div class="grid">
-                <h3 class="text-xl lg:text-2xl">Mail</h3>
+                <h3 class="text-xl lg:text-2xl text-black">Mail</h3>
                 <a href="mailto:jakob.tarp@outlook.com"> <p class="text-gray-500">Jakob.tarp@outlook.com</p></a>
               </div>
             </div>
@@ -297,9 +313,9 @@
 
           <div>
             <div class="mx-auto grid grid-cols-2">
-              <img class="mx-auto w-10" src="img/like..webp" alt="phone" />
+              <img class="mx-auto w-10 " src="img/like.png" alt="social" />
               <div class="grid">
-                <h3 class="text-xl lg:text-2xl">Social</h3>
+                <h3 class="text-xl lg:text-2xl text-black">Social</h3>
                 <div class="flex gap-4">
                   <a href="https://www.linkedin.com/in/jakob-tarp-97b5231b8/"><img class="w-10" src="https://api.iconify.design/skill-icons:linkedin.svg" alt="linkedin" /></a>
                   <a href="https://www.instagram.com/jakob.tarp/?hl=da"><img class="w-10" src="https://api.iconify.design/skill-icons:instagram.svg" alt="Instagram" /></a>
@@ -312,7 +328,7 @@
       </section>
     </div>
     
-    <footer class="p-5 text-center text-sm"><p class="footerp">©Jakob Tarp</p></footer>
+    <footer class="p-5 text-center text-lg"><p class="footerp">©Jakob Tarp</p></footer>
     
   </body>
 </html>
