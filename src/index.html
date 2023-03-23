@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Roboto+Condensed:wght@400;700&family=Roboto+Serif:opsz@8..144&family=Roboto:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+    
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+    <title>Portfolio 2023</title>
+    <link rel="icon" type="image/x-icon" href="/public/img/mig.webp" />
+  </head>
+
+  <!-- Procesbar  -->
+
+  <div class="procesbar ">
+  <svg width="60" height="60" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="30" pathLength="1" class="bg" />
+    <circle cx="50" cy="50" r="30" pathLength="1" class="progress" />
+  </svg>
+  </div>
+
+  <nav class="top-0 z-10 flex w-full flex-wrap fixed items-center justify-between p-6 " x-data="{ isOpen: false }" @keydown.escape="isOpen = false" :class="{ 'shadow-lg bg-transparent backdrop-blur-xl' : isOpen , 'bg-transparent' : !isOpen}">
+    <!--Logo etc-->
+    <div class="mr-6 flex flex-shrink-0 items-center text-sky-500">
+
+      </a>
+    </div>
+
+    <!--Toggle button (hidden on large screens)-->
+    <button @click="isOpen = !isOpen" type="button" class="block px-8 text-white hover:text-white focus:text-gray-500 focus:outline-none lg:hidden" :class="{ 'transition transform-180': isOpen }">
+      <svg class="h-9 w-9 fixed fill-current text-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+        <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+      </svg>
+    </button>
+
+    <!--Menu-->
+    <div class="hidden mt-8  w-full flex-grow " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" x-show.transition="true">
+      <ul class="list-reset flex-1 items-center font-medium pt-6 space-x-4 lg:pt-0">
+        <li class="">
+          <a class="flex place-content-center text-start 200ms py-2 px-4 text-sky-400 filter transition hover:scale-110  hover:underline mx-auto" href="#skills" @click="isOpen = false">Skills_</a>
+        </li>
+        <li class="">
+          <a class="flex place-content-center 200ms  py-2 px-4 text-sky-400 filter transition hover:scale-110 hover:font-semibold hover:underline mx-auto" href="#projects" @click="isOpen = false">Projects_</a>
+        </li>
+        <li class="">
+          <a class=" flex place-content-center 200ms  py-2 px-4 text-sky-400 filter transition hover:scale-110 hover:font-semibold hover:underline mx-auto" href="#passion" @click="isOpen = false">Passion_</a>
+        </li>
+        <li class="">
+          <a class="flex place-content-center 200ms  py-2 px-4 text-sky-400 filter transition hover:scale-110 hover:font-semibold hover:underline mx-auto" href="#cv" @click="isOpen = false">CV_</a>
+        </li>
+        <li class="">
+          <a class="flex place-content-center 200ms  py-2 px-4 text-sky-400 filter transition hover:scale-110 hover:font-semibold hover:underline" href="#resume" @click="isOpen = false">Resume_</a>
+        </li>
+        <li class="">
+          <a class="flex place-content-center 200ms  py-2 px-4 text-sky-400 filter transition hover:scale-110 hover:font-semibold hover:underline" href="#contact" @click="isOpen = false">Contact_</a>
+        </li>
+       
+      </ul>
+    </div>
+  </nav>
+  <!-- text-focus-in -->
+  
+  <body class="bg-gradient-to-b from-black via-gray-800 to-gray-700">
+      <div class="mx-auto place-items-center p-6 text-white lg:max-w-screen-lg lg:p-8 text-focus-in">
+    <div class="mx-auto grid h-screen grid-cols-2 place-content-center lg:place-items-center">
+      <div class="mx-auto mt-auto grid">
+        <h1 class="inline-block bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-500 via-sky-700 to-sky-900 bg-clip-text text-3xl font-bold text-transparent md:text-7xl lg:mb-2 lg:text-7xl">Jakob Tarp</h1>
+        <h2 class="inline-block bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-500 via-sky-700 to-sky-900 bg-clip-text text-xl font-bold text-transparent md:text-4xl lg:text-4xl">Multimediedesigner</h2>
+
+        <h3 class="mb-10 inline-block bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-100 via-sky-200 to-sky-300 bg-clip-text text-lg font-bold text-transparent md:text-3xl lg:text-3xl">Portfolio 2023</h3>
+      </div>
+      <div class="-z-10"><img src="img/mig.webp" alt="Jakob Tarp" /></div>
+      <div class="hidden lg:block mx-auto ">
+      <div class="flex gap-1 lg:gap-4 ">
+        <a class="my-auto inline-flex rounded-full border-2 border-sky-400 px-2 py-1 text-xs font-light md:rounded-full md:border-4 md:py-2 md:px-10 md:text-xl md:hover:scale-110 md:hover:bg-sky-800 lg:rounded-full lg:border-4 lg:py-2 lg:px-10 lg:text-xl lg:hover:scale-110 lg:hover:bg-sky-800" href="#skills">Skills <img class="ml-3 hidden lg:block lg:w-5" src="img/downarrow.webp" alt="#skills" /></a>
+        <a class="my-auto inline-flex rounded-full border-2 border-sky-400 px-2 py-1 text-xs font-light md:rounded-full md:border-4 md:py-2 md:px-10 md:text-xl md:hover:scale-110 md:hover:bg-sky-800 lg:rounded-full lg:border-4 lg:py-2 lg:px-10 lg:text-xl lg:hover:scale-110 lg:hover:bg-sky-800" href="#projects">Projects <img class="ml-3 hidden lg:block lg:w-5" src="img/downarrow.webp" alt="#skills" /></a>
+        <a class="my-auto inline-flex rounded-full border-2 border-sky-400 px-2 py-1 text-xs font-light md:rounded-full md:border-4 md:py-2 md:px-10 md:text-xl md:hover:scale-110 md:hover:bg-sky-800 lg:rounded-full lg:border-4 lg:py-2 lg:px-10 lg:text-xl lg:hover:scale-110 lg:hover:bg-sky-800" href="#passion">Passion<img class="ml-3 hidden lg:block lg:w-5" src="img/downarrow.webp" alt="#skills" /></a>
+        <a class="my-auto inline-flex rounded-full border-2 border-sky-400 px-2 py-1 text-xs font-light md:rounded-full md:border-4 md:py-2 md:px-10 md:text-xl md:hover:scale-110 md:hover:bg-sky-800 lg:rounded-full lg:border-4 lg:py-2 lg:px-10 lg:text-xl lg:hover:scale-110 lg:hover:bg-sky-800" href="#cv">CV<img class="ml-3 hidden lg:block lg:w-5" src="img/downarrow.webp" alt="#skills" /></a>
+        <a class="my-auto inline-flex rounded-full border-2 border-sky-400 px-2 py-1 text-xs font-light md:rounded-full md:border-4 md:py-2 md:px-10 md:text-xl md:hover:scale-110 md:hover:bg-sky-800 lg:rounded-full lg:border-4 lg:py-2 lg:px-10 lg:text-xl lg:hover:scale-110 lg:hover:bg-sky-800" href="#resume">Resume<img class="ml-3 hidden lg:block lg:w-5" src="img/downarrow.webp" alt="#skills" /></a>
+        <a class="my-auto inline-flex rounded-full border-2 border-sky-400 px-2 py-1 text-xs font-light md:rounded-full md:border-4 md:py-2 md:px-10 md:text-xl md:hover:scale-110 md:hover:bg-sky-800 lg:rounded-full lg:border-4 lg:py-2 lg:px-10 lg:text-xl lg:hover:scale-110 lg:hover:bg-sky-800" href="#contact">Contact <img class="ml-3 hidden lg:block lg:w-5" src="img/downarrow.webp" alt="#skills" /></a>
+      </div>
+      </div>
+    </div>
+
+    <section id="skills" class="mb-20 grid h-screen grid-cols-3 place-items-center">
+      <div class="grid place-content-center gap-3 lg:gap-6">
+        <h2 class="inline-block bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-500 via-sky-700 to-sky-900 bg-clip-text text-3xl font-bold text-transparent lg:text-5xl">Core skills</h2>
+        <div class="flex gap-1 lg:gap-3">
+          <img class="h-7 lg:h-10" src="img/html.webp" alt="" />
+          <p class="font-semibold lg:text-2xl">Html</p>
+        </div>
+        <div class="flex gap-1 lg:gap-3">
+          <img class="h-7 lg:h-10" src="img/css.webp" alt="" />
+          <p class="font-semibold lg:text-2xl">Css</p>
+        </div>
+        <div class="flex gap-1 lg:gap-3">
+          <img class="h-7 lg:h-10" src="img/tailwindlogo.webp" alt="" />
+          <p class="font-semibold lg:text-2xl">Tailwind</p>
+        </div>
+        <div class="flex gap-1 lg:gap-3">
+          <img class="h-7 lg:h-10" src="img/js.webp" alt="" />
+          <p class="font-semibold lg:text-2xl">Javascript</p>
+        </div>
+        <div class="flex gap-1 lg:gap-3">
+          <img class="h-7 lg:h-10" src="img/wordpress.webp" alt="" />
+          <p class="font-semibold lg:text-2xl">Wordpress</p>
+        </div>
+      </div>
+
+      <div class="lg:box7"><hr class="mx-auto my-4 h-1 w-20 justify-center rounded border-0 bg-sky-400 md:my-10 lg:w-48" /></div>
+
+      <div class="lg:box2 grid place-content-center gap-3 lg:gap-6">
+        <h2 class="inline-block bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-500 via-sky-700 to-sky-900 bg-clip-text text-end text-3xl font-bold text-transparent lg:text-5xl">Other skills</h2>
+
+        <div class="ml-auto flex gap-1 lg:gap-3">
+          <p class="font-semibold lg:text-2xl">Figma</p>
+          <img class="right-0 h-7 lg:h-10" src="img/figma.webp" alt="" />
+        </div>
+        <div class="ml-auto flex gap-1 lg:gap-3">
+          <p class="font-semibold lg:text-2xl">XD</p>
+          <img class="right-0 h-7 lg:h-10" src="img/xd.webp" alt="" />
+        </div>
+        <div class="ml-auto flex gap-1 lg:gap-3">
+          <p class="right-0 font-semibold lg:text-2xl">Illustrator</p>
+          <img class="right-0 h-7 lg:h-10" src="img/illustrator.webp" alt="" />
+        </div>
+        <div class="ml-auto flex gap-1 lg:gap-3">
+          <p class="font-semibold lg:text-2xl">Photoshop</p>
+          <img class="right-0 h-7 lg:h-10" src="img/photoshop.webp" alt="" />
+        </div>
+
+        <div class="ml-auto flex gap-1 lg:gap-3">
+          <p class="font-semibold lg:text-2xl">PremierePro</p>
+          <img class="right-0 h-7 lg:h-10" src="img/premiere.webp" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <div id="projects" class="h-screen place-content-center">
+      <div class="md:hidden lg:hidden">
+        <h2 class="mb-5 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-500 via-sky-700 to-sky-900 bg-clip-text text-3xl font-bold text-transparent lg:text-5xl">Projects</h2>
+
+        <p class="mb-20 text-gray-300">Her er nogle af de projekter som jeg har været en del af, min typiske rolle har været kodning og det tekniske.</p>
+      </div>
+
+      <div class="grid place-items-center gap-8 md:grid-cols-3 lg:grid-cols-3">
+        <div class="hidden md:block lg:block">
+          <h2 class="mb-10 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-500 via-sky-700 to-sky-900 bg-clip-text text-3xl font-bold text-transparent lg:text-5xl">Projects</h2>
+
+          <p class="text-gray-300">Her er nogle af projekter som jeg har været en del af, min typiske rolle i gruppearbejdet har været kodning og det tekniske.</p>
+        </div>
+        <div class="col-span-2 grid grid-cols-2 gap-8">
+          <div class="relative h-full w-full overflow-hidden rounded-2xl border-4 border-sky-400 object-cover">
+            <a href="https://dnygaard.dk/kea/09_CMS/nbu/wordpress/"><img class="cursor-pointer rounded-2xl brightness-50 grayscale filter transition duration-200 hover:scale-110 hover:rounded-lg hover:filter-none" src="img/nbt.webp" alt="" /></a>
+            <div class="absolute inset-x-0 bottom-0 w-full bg-blue-400 py-1 text-center text-xs leading-4 text-white">Nørrebro United / Fodboldklub</div>
+          </div>
+
+          <div class="relative h-full w-full overflow-hidden rounded-2xl border-4 border-sky-400">
+            <a href="https://dnygaard.dk/kea/tonelise/wordpress/"><img class="cursor-pointer rounded-2xl brightness-50 grayscale filter transition duration-200 hover:scale-110 hover:rounded-lg hover:filter-none" src="img/tonelise.webp" alt="" /></a>
+            <div class="absolute inset-x-0 bottom-0 w-full bg-blue-400 py-1 text-center text-xs leading-4 text-white">Tone-Lise / Designer</div>
+          </div>
+
+          <div class="relative h-full w-full overflow-hidden rounded-2xl border-4 border-sky-400">
+            <a href="https://jakobtarp.github.io/kampagnesite_blaagaard/"><img class="cursor-pointer rounded-2xl brightness-50 grayscale filter transition duration-200 hover:scale-110 hover:rounded-lg hover:filter-none" src="img/blaagaard.webp" alt="" /></a>
+            <div class="absolute inset-x-0 bottom-0 w-full bg-blue-400 py-1 text-center text-xs leading-4 text-white">Blaagaard / Teater</div>
+          </div>
+          <div class="relative h-full w-full overflow-hidden rounded-2xl border-4 border-sky-400">
+            <a href="https://jakobtarp.github.io/festival_jakob/index.html"><img class="cursor-pointer rounded-2xl brightness-50 grayscale filter transition duration-200 hover:scale-110 hover:rounded-lg hover:filter-none" src="img/festival.webp" alt="" /></a>
+            <div class="absolute inset-x-0 bottom-0 w-full bg-blue-400 py-1 text-center text-xs leading-4 text-white">FESTival / Passion</div>
+          </div>
+
+          <div class="relative h-full w-full overflow-hidden rounded-2xl border-4 border-sky-400">
+            <a href="https://jakobtarp.github.io/webdoc/"><img class="mx-auto cursor-pointer rounded-2xl brightness-50 grayscale filter transition duration-200 hover:scale-110 hover:rounded-lg hover:filter-none" src="img/webdoc.webp" alt="" /></a>
+            <div class="absolute inset-x-0 bottom-0 w-full bg-blue-400 py-1 text-center text-xs leading-4 text-white">Webdoc / Webfeature</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="passion" class="h-screen place-content-center">
+      <div class="grid place-items-center gap-2 md:grid-cols-3 lg:grid-cols-3">
+        <div class="md:hidden lg:hidden">
+          <h2 class="mb-5 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-500 via-sky-700 to-sky-900 bg-clip-text text-3xl font-bold text-transparent lg:mb-10 lg:text-5xl">Passion</h2>
+
+          <p class="mb-20 text-gray-300">Jeg er utrolig nørdet omkring mine interesser, og det her er bare nogle af dem der ligger højt på listen.</p>
+        </div>
+
+        <div class="col-span-2 grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-3">
+          <h3 class="my-auto text-center text-2xl lg:text-3xl">Film</h3>
+          <hr class="my-4 hidden h-1 w-20 justify-center rounded border-0 bg-sky-400 md:my-10 md:block lg:block lg:w-40" />
+          <img class="lg:h-20 h-14" src="img/video.webp" alt="" />
+          <h3 class="my-auto text-center text-2xl lg:text-3xl">Gaming</h3>
+          <hr class="my-4 hidden h-1 w-20 justify-center rounded border-0 bg-sky-400 md:my-10 md:block lg:block lg:w-40" />
+          <img class="lg:h-20 h-14 " src="img/game-controller.webp" alt="" />
+          <h3 class="my-auto text-center text-2xl lg:text-3xl">Teknologi</h3>
+          <hr class="my-4 hidden h-1 w-20 justify-center rounded border-0 bg-sky-400 md:my-10 md:block lg:block lg:w-40" />
+          <img class="lg:h-20 h-14" src="img/robot.webp" alt="" />
+          <h3 class="my-auto text-center text-2xl lg:text-3xl">Kodning</h3>
+          <hr class="my-4 hidden h-1 w-20 justify-center rounded border-0 bg-sky-400 md:my-10 md:block lg:block lg:w-40" />
+          <img class="lg:h-20 h-14" src="img/programming.webp" alt="" />
+          <h3 class="my-auto text-center text-2xl lg:text-3xl">Skuespil</h3>
+          <hr class="my-4 hidden h-1 w-20 justify-center rounded border-0 bg-sky-400 md:my-10 md:block lg:block lg:w-40" />
+          <img class="lg:h-20 h-14" src="img/masks.webp" alt="" />
+
+          <div class="grid"></div>
+        </div>
+        <div class="hidden md:block lg:block">
+          <h2 class="mb-10 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-500 via-sky-700 to-sky-900 bg-clip-text text-3xl font-bold text-transparent lg:text-5xl">Passion</h2>
+
+          <p class="text-gray-300">Jeg er utrolig nørdet omkring mine interesser, og det her er bare nogle af dem der ligger højt på listen.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CV -->
+
+    <div id="cv" class="mt-20 grid h-screen place-content-center">
+      <div class="mb-10 text-center"><h2 class="inline-flex bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-500 via-sky-700 to-sky-900 bg-clip-text px-5 text-4xl font-bold text-transparent lg:text-6xl">CV</h2></div>
+
+      <img class="hidden w-auto lg:block" src="img/cv2.webp" alt="" />
+      <img class="block w-60 lg:hidden" src="img/cvmobil.webp" alt="" />
+    </div>
+
+    <!-- Resume -->
+    <h2 id="resume" class="my-auto mb-20 mt-60 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-500 via-sky-700 to-sky-900 bg-clip-text text-center text-3xl font-bold text-transparent lg:text-5xl">Resume</h2>
+
+    <grid class="mb-20 grid gap-10 leading-7 text-gray-400 md:grid-cols-2 lg:grid-cols-2">
+      <div>
+        <p class="text-gray-300">Jeg er en positiv, fleksibel, energisk og ansvarsfuld mand på 25 år, som elsker nye udfordringer og at opnå resultater. Jeg er igang med 3. semester af Multidmediedesigner udannelsen på KEA og i den forbindelse ønsker jeg at søge praktik hos jer og bruge de kompetencer jeg har erhvervet mig og få fyldt rygsækken endnu mere op.</p>
+        <br />
+        <p class="text-gray-300">
+          Jeg har erfaring indenfor de mest brugte Adobe programmer, kodning i HTML, CSS , Tailwind og Javascript samt Wordpress. Derudover, så har jeg også erfaring indenfor videoredigering. <br />
+          Gennem mine jobs har jeg fået en nuanceret forståelse og erfaring med salg og kundeservice. Jeg er vant til at have mange bolde i luften og arbejder struktureret med høj kvalitet og præcison for øje.
+        </p>
+        <br />
+        <p class="text-gray-300">Mine ferier bruger jeg gerne på Camp True North som teamleder. Det er en camp som hjælper børn og unge der har brug for et skub i den rigtige retning. Arbejdet går ud på, at jeg får 10-15 unge mennesker på mit hold og så er det mit ansvar at hjælpe og vejlede dem i løbet af ugen. Det gør jeg blandt andet, fordi personlig udvikling og udfordringer er noget jeg vægter højt. Camp True North åbnede mine øjne for fundamentale værdier. Både personligt, men også særligt i forhold til arbejdsetik, moral og det at arbejde som en del af et team. Erfaringerne som teamleder har givet mig ledelsesmæssig erfaring der har rustet mig til at tage ansvar, handle selvstændigt og være imødekommende.</p>
+      </div>
+
+      <div>
+        <p class="text-gray-300">Tidligere har jeg dyrket taekwondo på højt plan og formåede i 2010 at få det storte bælte. Jeg fik mine første ledelsesmæssige erfaringer her, da jeg som den yngste i klubben blev holdtræner. Det stillede store krav til min disciplin og selvstændighed i en ung alder. Årene i klubben har gjort, at jeg kan gennemføre hvad jeg sætter mig for. Jeg er stædig, vedholdende og tror på mig selv.</p>
+        <br />
+        <p class="text-gray-300">Derudover, spiller jeg til tider skuespil i store og små produktioner, hvilket også har trænet mig til at skulle tilpasse mig uforudsete situationer og bevare fokus. Jeg har altid skubbet til mine grænser med det formål at få endnu mere viden og jeg er nu klar til nye udfordringer. Jeg er sikker på vi kunne blive et godt match. Jeg ser frem til at høre fra jer!</p>
+      </div>
+    </grid>
+
+     
+
+          <section id="contact" class="grid h-screen place-items-center md:grid-cols-2 lg:grid-cols-2">
+        <div class="hidden md:block lg:block">
+          <div class="flex">
+            <div class=" md:mr-10 lg:mr-10"><h2 class="inline-flex bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-500 via-sky-700 to-sky-900 bg-clip-text px-5 text-center text-4xl font-bold text-transparent lg:text-6xl">Contact</h2></div>
+            <div class="lg:box7 hidden md:block lg:block"><hr class="mx-auto my-4 h-1 w-20 justify-center rounded border-0 bg-sky-400 md:my-10 lg:w-48" /></div>
+          </div>
+        </div>
+        <div class="md:hidden lg:hidden mt-auto">
+          <h2 class="mb-10 inline-flex bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-500 via-sky-700 to-sky-900 bg-clip-text px-5 text-center text-4xl font-bold text-transparent lg:text-6xl">Contact</h2>
+          <img class="mx-auto h-10 animate-bounce md:hidden lg:hidden" src="img/downarrow..webp" alt="" />
+        </div>
+
+        <div class="grid gap-10 lg:gap-20">
+          <div>
+            <div class="mx-auto grid grid-cols-2">
+              <a href="tel:+4540911335"><img class="mx-auto w-10" src="img/phone-call..webp" alt="phone" /></a>
+              <div class="grid">
+                <h3 class="text-xl lg:text-2xl">Telefon</h3>
+                <a href="tel:+4540911335"><p class="text-gray-500">+45 40 91 13 35</p></a>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="mx-auto grid grid-cols-2">
+              <a href="mailto:jakob.tarp@outlook.com"> <img class="mx-auto w-10" src="img/email..webp" alt="mail" /></a>
+              <div class="grid">
+                <h3 class="text-xl lg:text-2xl">Mail</h3>
+                <a href="mailto:jakob.tarp@outlook.com"> <p class="text-gray-500">Jakob.tarp@outlook.com</p></a>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="mx-auto grid grid-cols-2">
+              <img class="mx-auto w-10" src="img/like..webp" alt="phone" />
+              <div class="grid">
+                <h3 class="text-xl lg:text-2xl">Social</h3>
+                <div class="flex gap-4">
+                  <a href="https://www.linkedin.com/in/jakob-tarp-97b5231b8/"><img class="w-10" src="https://api.iconify.design/skill-icons:linkedin.svg" alt="linkedin" /></a>
+                  <a href="https://www.instagram.com/jakob.tarp/?hl=da"><img class="w-10" src="https://api.iconify.design/skill-icons:instagram.svg" alt="Instagram" /></a>
+                  <a href="https://www.jakobtarp.com"><img class="w-10" src="img/site.webp" alt="Instagram" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <footer class="p-5 text-center text-sm"><p class="footerp">©Jakob Tarp</p></footer>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
+
+     <!-- <section id="contact" class="grid place-items-center">
+        <div class="my-auto md:mr-10 lg:mr-10"><h2 class="inline-flex bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-500 via-sky-700 to-sky-900 bg-clip-text px-5 text-center text-4xl font-bold text-transparent lg:text-6xl">Contact</h2></div>
+
+        <div class="grid-cols box-border grid rounded-2xl border-4 bg-gradient-to-b from-gray-900 via-sky-600 to-black p-3">
+          <img class="h-[300px]" src="img/Sky.jpeg" alt="" />
+          <div class=""><hr class="mx-auto mt-2 h-1 w-auto justify-center rounded border-0 bg-sky-400" /></div>
+          <div class="mt-5 grid grid-cols-2 justify-around p-3">
+            <div class="grid justify-around gap-8">
+              <div class="flex gap-3">
+                <a class="my-auto" href="tel:+4540911335"><img class="w-10" src="img/phone-call..webp" alt="phone" /></a>
+                <div class="grid">
+                  <h3 class="mt-auto text-base">Telefon</h3>
+                  <a href="tel:+4540911335"><p class="text-gray-500">+45 40 91 13 35</p></a>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <a class="my-auto" href="mailto:jakob.tarp@outlook.com"><img class="w-10" src="img/email..webp" alt="mail" /></a>
+                <div class="grid">
+                  <h3 class="mt-auto text-base">Mail</h3>
+                  <a href="mailto:jakob.tarp@outlook.com"> <p class="text-gray-500">Jakob.tarp@outlook.com</p></a>
+                </div>
+              </div>
+              <div>
+                <div class="flex gap-3">
+                  <img class="my-auto h-10" src="img/like..webp" alt="social" />
+                  <div class="grid">
+                    <h3 class="text-base">Social</h3>
+                    <div class="flex gap-2">
+                      <a href="https://www.linkedin.com/in/jakob-tarp-97b5231b8/"><img class="w-10" src="https://api.iconify.design/skill-icons:linkedin.svg" alt="linkedin" /></a>
+                      <a href="https://www.instagram.com/jakob.tarp/?hl=da"><img class="w-10" src="https://api.iconify.design/skill-icons:instagram.svg" alt="Instagram" /></a>
+                      <a href="https://www.jakobtarp.com"><img class="w-10" src="img/site.webp" alt="Instagram" /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+
+            <div class="mx-auto my-auto flex place-items-center">
+              <div class="ml-auto flex h-[250px] w-1 rounded border-0 bg-sky-300 p-0.5"></div>
+              <div class="ml-5">
+                <h3 class="text-lg font-normal">Student</h3>
+                <h3 class="inline-flex bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-200 via-sky-300 to-sky-400 bg-clip-text text-2xl font-bold text-transparent">Jakob Tarp</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
