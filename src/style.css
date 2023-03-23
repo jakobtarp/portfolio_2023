@@ -5,33 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-  }
-  h1 {
     font-family: "Delicious Handrawn", cursive;
-    font-weight: 700;
-    font-size: 5rem;
-    color: white;
-  }
-  h2 {
-    font-family: "Delicious Handrawn", cursive;
-    font-weight: 700;
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-    color: white;
-  }
-  h3 {
-    font-family: "Delicious Handrawn", cursive;
-
-    font-weight: 700;
-    font-size: 2rem;
-    margin-bottom: 5px;
-    color: white;
-  }
-
-  p,
-  a {
-    font-family: "Delicious Handrawn", cursive;
-    font-size: 1rem;
   }
 
   article {
@@ -59,7 +33,7 @@
   }
 
   .progress {
-    stroke: lightskyblue;
+    stroke: rgb(8, 8, 8);
     stroke-dasharray: 0, 1;
   }
 }
