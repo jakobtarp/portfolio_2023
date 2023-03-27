@@ -31,7 +31,7 @@
     <circle cx="50" cy="50" r="30" pathLength="1" class="progress" />
   </svg>
   </div>
-  <nav class="top-0 z-10 flex w-full flex-wrap fixed items-center justify-between p-6 " x-data="{ isOpen: false }" @keydown.escape="isOpen = false" :class="{ 'shadow-lg bg-transparent backdrop-blur-xl' : isOpen , 'bg-transparent' : !isOpen}">
+  <nav class="top-0 right-0 z-10 flex w-full flex-wrap fixed items-center justify-between p-6 " x-data="{ isOpen: false }" @keydown.escape="isOpen = false" :class="{ 'shadow-lg bg-transparent backdrop-blur-xl' : isOpen , 'bg-transparent' : !isOpen}">
     <!--Logo etc-->
     <div class="mr-6 flex flex-shrink-0 items-center text-black">
 
@@ -39,7 +39,7 @@
     </div>
 
     <!--Toggle button (hidden on large screens)-->
-    <button @click="isOpen = !isOpen" type="button" class="block px-8 text-white hover:text-white focus:text-gray-500 focus:outline-none lg:hidden" :class="{ 'transition transform-180': isOpen }">
+    <button @click="isOpen = !isOpen" type="button" class="block px-5 text-white hover:text-white focus:text-gray-500 focus:outline-none lg:hidden" :class="{ 'transition transform-180': isOpen }">
       <svg class="h-9 w-9 fixed fill-current text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
         <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
@@ -157,7 +157,7 @@
         </div>
 
         <div class="ml-auto flex gap-1 lg:gap-3">
-          <p class="font-semibold lg:text-2xl">PremierePro</p>
+          <p class="font-semibold lg:text-2xl">Premiere</p>
           <img class="right-0 h-7 lg:h-10" src="img/premiere.webp" alt="" />
         </div>
       </div>
